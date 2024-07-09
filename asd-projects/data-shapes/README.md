@@ -108,6 +108,8 @@ For this TODO, you will need to add a new `goodBehavior` property to every objec
 
 > **HINT:** 2c, 2d, and 2e are mutually exclusive; can they all be `if` statements? If not, what should they be?
 
+> **TESTING:** If properly completed, then all boxes should display a "goodBehavior" property when you click "Next" or "Prev". Try testing with different colored shapes.
+
 ## TODO 3: Help Display a Shape (Static)
 
 This TODO will allow you to finally display shapes by clicking the "Display" button. To do so, you will have to both create a new function, and then call that function at the appropriate place.
@@ -117,7 +119,7 @@ This TODO will allow you to finally display shapes by clicking the "Display" but
   1. Call the function `setBackgroundWithObject` (already created for you), and pass in `data` as its only argument
   2. Set `animationDetails.displayType` to store `1`
 
-- **3b)** Find where TODO 3b is listed in your code. There, call your `handleStatic` function. It should take the current shape object as an argument. Check the below HINT for how to access the current shape, as it is *not* referring to the `currentShape` variable.
+- **3b)** Find where TODO 3b is listed in your code. There, call your `handleStatic` function. It should take the current shape object as an argument. Check the below HINT for how to access the current shape, as it is _not_ referring to the `currentShape` variable.
 
 > **HINT:** `dataShapes` is your array of shape objects. The current index being displayed is stored in a variable called `currentIndex`. How can you use that to get the correct object from your `dataShapes` array and pass it into `handleStatic`?
 
@@ -159,7 +161,7 @@ This TODO will allow you to display shapes through the "Display Bad" button, whi
 
   1. Create a new variable called `currentShape` and copy the shape from `dataShapes`'s `currentIndex` into that new variable.
   2. Create a new variable called `repeat` and copy the value of `currentShape`'s `repeat` property into this new variable.
-  2. Call your `handleBad` function. It should take the `currentShape` and `repeat` as arguments.
+  3. Call your `handleBad` function. It should take the `currentShape` and `repeat` as arguments.
 
 > **TESTING:**
 >
