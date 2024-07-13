@@ -247,13 +247,14 @@ function hasCollidedWithSnake() {
   head and each part of the snake's body also knows its own row and column.
   
   */
- for (var i = 0; i > snake.body.length-1; i++){
-if (snake.head.row === snake.body[i+1].row && snake.head.column === snake.body[i].column ) {
+ for (var i = 1; i < snake.body.length; i++){
+if (snake.head.row === snake.body[i].row && snake.head.column === snake.body[i].column) {
   return true;
 }
  }
   return false;
 }
+
 
 function endGame() {
   // stop update function from running
@@ -372,7 +373,11 @@ function getRandomAvailablePosition() {
     not occupied by a snakeSquare in the snake's body. If it is then set 
     spaceIsAvailable to false so that a new position is generated.
     */
-  }
+   for (var i = 1; i < snake.body.length; i++) {
+    if(apple.row === snake.body[i].row && apple.column === snake.body[i].column) {
+      spaceIsAvailable = false;
+    }
+   }
 
   return randomPosition;
 }
@@ -390,3 +395,4 @@ function calculateHighScore() {
   return highScore;
 }
 
+}
