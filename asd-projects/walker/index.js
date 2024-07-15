@@ -41,6 +41,7 @@ function runProgram(){
   function newFrame() {
     repositionGameItem();
     redrawGameItem();
+    wallCollision();
 
   }
   
@@ -84,6 +85,7 @@ var walker = {
   speedY: 0 
 };
 
+
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
@@ -100,8 +102,25 @@ var walker = {
   }
   
   function wallCollision() {
+    if (walker.positionX > ($("board").width())) {
+      walker.positionX -= walker.speedX;
+    }
+
+    else if (walker.positionX < 0) {
+      walker.positionX -= walker.speedX;
+
+    } 
     
+    else if (walker.positionY > ($("board").height())) {
+      walker.positionY-= walker.speedY;
+    }
+
+
+    else if (walker.positionY < 0) {
+      walker.positionY -= walker.speedY;
+    }
   }
+    
 
   function endGame() {
     // stop the interval timer
