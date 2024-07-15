@@ -102,7 +102,7 @@ var walker = {
   }
   
   function wallCollision() {
-    if (walker.positionX > ($("board").width())) {
+    if (walker.positionX > ($("#board").width())) {
       walker.positionX -= walker.speedX;
     }
 
@@ -111,7 +111,7 @@ var walker = {
 
     } 
     
-    else if (walker.positionY > ($("board").height())) {
+    else if (walker.positionY > ($("#board").height())) {
       walker.positionY-= walker.speedY;
     }
 
