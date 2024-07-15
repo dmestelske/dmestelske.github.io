@@ -99,6 +99,10 @@ var walker = {
     $("#walker").css("top", walker.positionY);
   }
   
+  function wallCollision() {
+    
+  }
+
   function endGame() {
     // stop the interval timer
     clearInterval(interval);
