@@ -1,5 +1,7 @@
 body {
   margin: 0px;
+  width: 1400px;
+  height:750px;
 }
 
 canvas {
